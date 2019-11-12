@@ -1,0 +1,31 @@
+---
+title: Status
+---
+
+markdown:
+  # async-std Project Status
+
+  The async-std ecosystem consists of the core async-std and async-task libraries.
+
+  Below, you find a breakdown of their metrics, to judge their current status.
+
+  Also listed are some dependencies.
+
+table
+  thead
+    tr
+      th Project
+      th Released Version
+      th Master Build Status
+  tbody
+    - projects.each do |project|
+      tr
+        td
+          a href=project.github_url = project
+        td
+          a href=project.crates_io_url
+            img src=project.version_badge
+        td
+          a href="https://github.com/async-rs/#{project}"
+            img src=project.ci_badge
+

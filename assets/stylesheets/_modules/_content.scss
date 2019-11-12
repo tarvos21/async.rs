@@ -1,0 +1,139 @@
+.content {
+  background-color: palette(white);
+  padding: rhythm(1);
+  @include from(3) {
+    border-radius: 0.3rem;
+    padding: rhythm(1.5);
+  }
+
+  pre {
+    @extend .code;
+    @include margin-trailer(1);
+    display: block;
+
+    &:last-child {
+      @include margin-trailer(0);
+    }
+  }
+
+  hr {
+    @include pre(2);
+    @include post(2);
+    @include margin-leader(2);
+    @include margin-trailer(2);
+    background-color: palette(beige);
+    border: 0;
+    color: palette(beige);
+    display: block;
+    height: 0.2rem;
+  }
+
+  table {
+    @include margin-trailer(1);
+    @include type-scale(small);
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+
+    th {
+      @include type-weight(semi-bold);
+      border-bottom: 0.25rem solid palette(beige, dark);
+      margin: 0;
+      padding: rhythm(0.25) rhythm(0.5);
+      text-align: left;
+    }
+
+    tr {
+      &:nth-child(2n) {
+        background-color: palette(beige);
+      }
+    }
+
+    td {
+      margin: 0;
+      padding: rhythm(0.25) rhythm(0.5);
+    }
+  }
+
+  blockquote {
+    @include type-scale(small);
+    margin: 0;
+    @include margin-trailer(1);
+    background-color: palette(red, extra-light);
+    border-radius: 0.5rem;
+    color: palette(red, dark);
+    padding: rhythm(1);
+
+    &:last-child {
+      @include margin-trailer(0);
+    }
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+}
+
+.toc {
+  margin-bottom: 2rem;
+
+  h2 {
+    margin-bottom: .5rem;
+  }
+
+  ol {
+    @include at(2) {
+      column-count: 1;
+    }
+
+    @include at(2) {
+      column-count: 2;
+    }
+
+    @include from(3) {
+      column-count: 3;
+    }
+    margin-left: 0.5rem;
+    padding-left: 1.5rem;
+
+    li {
+      padding-top: .50em;
+      list-style-type: decimal;
+    }
+  }
+}
+
+.application-notice {
+  @include type-scale(small);
+  padding: 5px 12px 15px 12px;
+  line-height: 24px;
+  margin-bottom: 24px;
+  border-radius: 0.3rem;
+
+  .notice-title {
+    margin: -5px -12px 15px;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    padding: 3px 12px 3px 12px;
+  }
+}
+
+.info-notice {
+  color: palette(blue, dark);
+  background-color: palette(blue, extra-light);
+
+  .notice-title {
+    color: #FFF;
+    background-color: palette(blue, light);
+  }
+}
+
+.warning-notice {
+  color: palette(red, dark);
+  background-color: palette(red, extra-light);
+
+  .notice-title {
+    color: #FFF;
+    background-color: palette(red, light);
+  }
+}

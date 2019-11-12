@@ -1,0 +1,15 @@
+.hero
+  div.hero__logo
+    = image_tag 'logo--hero.svg', class: 'hero__logo__image'
+
+  p.hero__intro
+    span.hero__intro__name> async-std
+    | makes async programming foundations easy and approachable. Built in
+    =<> link_to 'Rust', 'https://rust-lang.org'
+    | for speed and safety! Read our
+    =<> link_to 'Announcement', 'https://async.rs/blog/announcing-async-std/'
+    | here.
+
+  ul.hero__buttons.inline-buttons--stacked
+    li.inline-buttons--stacked__button= link_to 'Learn More', "https://book.async.rs", class: 'button button--full button--large'
+    li.inline-buttons--stacked__button--last= link_to 'Contribute to async-std', '/contribute', class: 'button--secondary button--full button--large'

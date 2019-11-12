@@ -1,0 +1,11 @@
+-
+  name: async-std
+  api_url: https://docs.rs/async-std
+-
+  name: async-task
+  api_url: https://docs.rs/async-task
+# To whomever ventures here: async-tls is in planning
+# and to be released soon.
+#-
+#  name: async-tls
+#  api_url: https://docs.rs/async-tls
